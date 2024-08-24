@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    margin-top: 50px;
+}
+
+body{
+    position: relative;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255 255 255 /0.9);
+    box-shadow: 0 0 10px rgba(0 0 0 /0.2)
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.logo,span{
+    color: #273e60;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.menu li {
+    margin: 0 15px;
+}
+
+
+
+h1{
+    font-size: 50px;
+}
+
+.mrnu li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #999;
+    position: relative;
+
+}
+
+.jedy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105vh;
+}
+#caroussel{
+    width: 720px;
+    overflow: hidden; /*La valeur auto de la proprieté overflow crée une scrol en dessous de la boite overflow que l'utilisateur peux choisir d'utiliser pour défiler les images. Sa valeur hidden permet de masquer ce scrol pour plus de beauté.*/
+    border: 0px solid #333;
+    
+}
+.imagess{
+    display: flex;
+        animation-duration: 20s;
+        animation-name: mesimages;
+        animation-iteration-count: infinite; /*tourner en boucle*/
+
+}
+
+@keyframes mesimages {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-720px);
+    }
+    50%{
+        transform: translateX(-1440px);
+    }
+    75%{
+        transform: translateX(-2160px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+
+}
+
+/*Début b de l'animation au dessus*/
+.menu li a::before {
+    position: absolute;
+    top: -5px;
+    left: 0;    /*l'annimation se fait par dessus en quittant le coté gauche*/
+    content: "";
+    width: 100px;
+    height: 2px;
+    border-radius: 6px;
+    background-color: #27ae60;
+    transition: 0.5s;  /*l'annimation dure 0.5s au survol*/
+}
+.menu li a:hover::before {
+    width: 100%;
+}
+
+/*fin de l'animation au dessus*/
+
+/*Début de l'animation au dessous*/
+.menu li a::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0;      /*l'annimation se fait par dessous en quittant le coté droit*/
+    content: "";
+    width: 100px;
+    height: 2px;
+    border-radius: 6px;
+    background-color: #27ae60;
+    transition: 0.5s;   /*l'annimation dure 0.5s au survol*/
+}
+.menu li a:hover::after {
+    width: 100%;
+}
+/*fin de l'animation au dessous*/
+
+/*home css */
+
+#home {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 10%;
+    height: calc(100vh - 50px);
+    cursor: pointer;
+}
+
+#home .left h3{
+    font-size: 40px;
+    color: #27ae60;
+}
+
+button a {
+    
+    font-size: 20px;
+    color: white;
+    border: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    z-index: -1;
+   
+
+
+}
+
+.btn
+{
+    width: 300px;
+    height: 70px;
+    margin-top: 30px;
+    background-color: black;
+}
+
+.btn:hover{
+    background-color: #27ae60;
+    border: #27ae60;
+    letter-spacing: 1px;
+}
+
+.btn_buy{
+    width: 120px;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 10px;
+    border: deeppink;
+}
+
+.btn_buy:hover{
+    background-color: #27ae60;
+    border: #27ae60;
+    letter-spacing: 1px;
+}
+
+.btn_no_buy{
+    width: 120px;
+    height: 50px;
+    background-color: rgb(2, 0, 1);
+    border-radius: 10px;
+    border: deeppink;
+}
+.btn_no_buy:hover{
+    background-color: #b80b0b;
+    border: #b80b0b;
+    letter-spacing: 1px;
+}
+
+.dish{
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+.dishes{
+    
+}
+
+.ola:hover{
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn_buy_compte{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(83, 83, 150);
+    border-radius: 10px;
+    border: rgb(83, 83, 150);
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.btn_buy_compte:hover{
+    background-color: #27ae60;
+    border: #27ae60;
+    letter-spacing: 1px;
+}
+
+.btn_see_more{
+
+}
+
+.btn_see_more{
+    width: 40%;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 10px;
+    border: deeppink;
+    font-size: 30px;
+    color: white;   
+    text-align: center;
+    position: relative;
+    margin-left: 250px;
+}
+.btn_see_more:hover{
+    background-color: #27ae60;
+    border: #27ae60;
+    letter-spacing: 1px;
+}
+input, select{
+    width: 1000px;
+     height: 50px;
+     border-radius: 10px; 
+    background-color: aliceblue;
+    border: #27ae60;
+    font-size: large;
+}
+input:hover{
+    box-shadow: 5px 5px 5px 5px rgb(116, 238, 116);
+
+}
+
+select:hover{
+    box-shadow: 5px 5px 5px 5px rgb(116, 238, 116);
+    
+}
+
+.bttn{
+    width: 40%;
+    height: 50px;
+    background-color: #27ae60;
+    border-radius: 10px;
+    border: #27ae60;
+    font-size: 30px;
+    color: white;   
+    text-align: center;
+    position: relative;
+   
+}
+.bttnn{
+    width: 40%;
+    height: 50px;
+    background-color: #b80b0b;
+    border-radius: 10px;
+    border: #b80b0b;
+    font-size: 30px;
+    color: white;   
+    text-align: center;
+    position: relative;
+}
+
+
+/*Responsive*/
+
+@media (max-width:964px){
+    header  .menu{
+        display: none;
+
+    }
+    header {
+        padding: 0 20x;
+    }
+    #home{
+        flex-direction: column;
+        padding: 12px;
+        height: file-content;
+    }
+    #home .left, #home .right {
+        width: 100%;
+        padding: 0;
+    }
+    #home .left{
+        margin: 100px 0;
+    }
+    #home .left h1 {
+        font-size: 20px;
+    }
+    #home .left h4 {
+        font-size: 15px;
+    }
+    #home .left p{
+        font-size: 15px;
+    }
+    #menu .dishes .dish{
+        width: 10px;
+        max-width: 260px;
+    }
+    #about_us {
+        padding: 10px;
+        height: auto;
+    }
+    #about_us .about {
+        flex-direction: column;
+        height: 10px;
+    }
+    #about_us .about{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #about_us .left , #about_us .right{
+        width: 100%;
+    }
+    #about_us .left{
+        height: fit-content;
+    }
+    #about_us .left img {
+        width: 50%;
+    }
+    #about_us .right{
+        text-align: center;
+    }
+    .comment_section{
+        height: auto;
+    }
+    .comment_section .comments .comment{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .service_list .services{
+        padding: 0 50px;
+    }
+    .toggle_menu{
+        display: flex;
+        height: 40px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .toggle_menu::before{
+        display: flex;
+        height: 3px;
+        width: 28px;
+        background-color: #27ae60;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 #27ae60;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .toggle_menu.active::before{
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 #27ae60;
+
+    }
+
+
+    .toggle_menu::after{
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 20px;
+        background-color: #27ae60;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .toggle_menu.active::after{
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0 #27ae60;
+
+    }
+    header .menu.responsive{
+        display: flex;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0, 1);
+        flex-direction: column;
+    }
+    header .menu.responsive li {
+        margin: 15px 0;
+    }
+
+
+}
+    
